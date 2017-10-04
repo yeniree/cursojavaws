@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/WebApplicationEjemploSOAP/HolaMundoWebService?WSDL" uri="xml-resources/web-service-references/HolaMundoWebService/wsdl/localhost_8080/WebApplicationEjemploSOAP/HolaMundoWebService.wsdl"/>
+    <system systemId="http://localhost:8080/WebApplicationEjemploSOAP/HolaMundoWebService?xsd=1" uri="xml-resources/web-service-references/HolaMundoWebService/wsdl/localhost_8080/WebApplicationEjemploSOAP/HolaMundoWebService.xsd_1.xsd"/>
+</catalog>
