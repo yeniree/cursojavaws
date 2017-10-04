@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<favoritos>
+  <pagina valoracion="10" >
+    <nombre>javaHispano</nombre>
+    <direccion>http://www.javahispano.org</direccion>
+  </pagina>
+  <pagina valoracion="1">
+    <nombre>GFT Techonologies</nombre>
+    <direccion>http://www.gft.com</direccion>
+  </pagina>
+</favoritos>
