@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <script src="jquery-3.2.1.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $('#buttonGET').on('click', function () {
+                    $.getJSON('/WebApplicationREST/webresources/Persona/2', function (persona) {
+                        $('#divContenido').html(persona.id + ' ' + persona.nombre + ' ' + persona.apellido);
+                    });
+                    $.getJSON('/WebApplicationREST/webresources/Persona', function (personas) {
+                        $.each(personas, function (index, persona) {
+                            var h = '<tr>' 
+                                    + '<td>' + persona.id + '</td>'
+                                    + '<td>' + persona.nombre + '</td>'
+                                    + '<td>' + persona.apellido + '</td>'
+                                    + '</tr>';
+                            $('#tablaPersonas').append(h);
+                        });
+                    });
+        
+                    $.ajax({
+                        type: 'POST',
+                        url: '/WebApplicationREST/webresources/Persona',
+                        data: JSON.stringify({"nombre":"Juan"}),
+                        success: function (data){
+                            alert('data: ' + data.nombre)
+                        },
+                        contentType: "application/json",
+                        dataType: 'json'
+                    });
+                });
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <input type="button" id="buttonGET" value="Llamar GET" />
+        <div id="divContenido">TODO write content</div>
+
+        <table id="tablaPersonas"></table>
+    </body>
+</html>
